@@ -41,7 +41,7 @@ def pointLine2():
     for i in range(10):
         x = 5 + i
         y = 3.0
-        plot(x, y, '-*r')
+        plot(x, y, '-*b')
     for i in range(10):
         x = 5 + i
         y = 5.0
@@ -70,10 +70,61 @@ def affine():
     ylim(0, 50)
     x = 10
     y = 10
-    for i in range(31):
-        x = 10 + i
-        y += x
-        plot(x, y, '-*r')
+    for i in range(30):
+        x += 1
+        y += 1
+        plot(x, y, '-*b')
     show()
 
 affine()
+
+def affines():
+    xlim(0, 25)
+    ylim(0, 45)
+    x = 0
+    y = 0
+    while x < 20:
+        x += 1
+        y = 2*x
+        plot(x, y, '-*r')
+    x = 0
+    y = 0
+    while x < 20:
+        x += 1
+        y += 1
+        plot(x, y, '-*b')
+    x = 0
+    y = 0
+    while x < 20:
+        x += 1
+        y = 0.5*x
+        plot(x, y, '-*r')
+    show()
+
+affines()
+
+def cube():
+    xlim(-3, 3)
+    ylim(0, 10)
+    x = -3
+    y = -3
+    while x < 3:
+        x += 6/100
+        y = x**2
+        plot(x, y, '-*b')
+    show()
+
+cube()
+
+def inverse():
+    xlim(-5, 5)
+    ylim(-20, 20)
+    x = -5
+    y = -5
+    while x < 5:
+        x += 10/500
+        y = 1/x
+        plot(x, y, '-*b')
+    show()
+
+inverse()
